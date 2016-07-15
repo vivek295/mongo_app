@@ -8,8 +8,7 @@ development:
       database: mongoid
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
-      hosts:
-        - 127.0.0.1:26060
+      uri: mongodb://mfsi_vivek:mindfire@ds011890.mlab.com:11890/mongoid
       options:
         #read: :secondary
         # Change the default write concern. (default = { w: 1 })
@@ -45,7 +44,7 @@ development:
         # Force a the driver cluster to behave in a certain manner instead of auto-
         # discovering. Can be one of: :direct, :replica_set, :sharded. Set to :direct
         # when connecting to hidden members of a replica set.
-        connect: :sharded
+        # connect: :sharded
 
         # Changes the default time in seconds the server monitors refresh their status
         # via ismaster commands. (default: 10)
@@ -77,10 +76,10 @@ development:
 
         # The name of the replica set to connect to. Servers provided as seeds that do
         # not belong to this replica set will be ignored.
-        replica_set: 
-          hosts:
-            - 127.0.0.0:27000
-            - 127.0.0.0:27003
+        # replica_set: 
+        #   hosts:
+        #     - 127.0.0.0:27000
+        #     - 127.0.0.0:27003
 
         # Whether to connect to the servers via ssl. (default: false)
         # ssl: true
